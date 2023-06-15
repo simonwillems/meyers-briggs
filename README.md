@@ -160,32 +160,39 @@ So we expect that there's things you would do, but not within a fast tech challe
 
 Create a repository using your personal GitHub account and send us the link that we can clone. Or send a zip.
 
-Test Case A,Test Case B,Test Case D,Test Case E,Test Case F,Test Case G,Test Case H
-Question 1,4,1,3,3,4,1,7
-Question 2,3,5,2,4,4,1,7
-Question 3,1,4,6,7,4,1,7
-Question 4,6,6,1,1,4,1,7
-Question 5,7,5,7,2,4,1,7
-Question 6,3,2,3,5,4,1,7
-Question 7,5,6,2,4,4,1,7
-Question 8,3,3,5,3,4,1,7
-Question 9,6,3,2,2,4,1,7
-Question 10,6,2,7,6,4,1,7
-Result:,ENTP,ESTJ,INFP,ISFP,ESTJ,ISTJ,ESTP
+- Test Case A,Test Case B,Test Case D,Test Case E,Test Case F,Test Case G,Test Case H
+- Question 1,4,1,3,3,4,1,7
+- Question 2,3,5,2,4,4,1,7
+- Question 3,1,4,6,7,4,1,7
+- Question 4,6,6,1,1,4,1,7
+- Question 5,7,5,7,2,4,1,7
+- Question 6,3,2,3,5,4,1,7
+- Question 7,5,6,2,4,4,1,7
+- Question 8,3,3,5,3,4,1,7
+- Question 9,6,3,2,2,4,1,7
+- Question 10,6,2,7,6,4,1,7
+- Result:,ENTP,ESTJ,INFP,ISFP,ESTJ,ISTJ,ESTP
 
-Question,Dimension,Direction,Meaning
-You find it takes effort to introduce yourself to other people.,EI,1,I
-You consider yourself more practical than creative.,SN,-1,S
-Winning a debate matters less to you than making sure no one gets upset.,TF,1,F
-You get energized going to social events that involve many interactions.,EI,-1,E
-You often spend time exploring unrealistic and impractical yet intriguing ideas.,SN,1,N
-Deadlines seem to you to be of relative rather than absolute importance.,JP,1,P
-Logic is usually more important than heart when it comes to making important decisions.,TF,-1,T
-Your home and work environments are quite tidy.,JP,-1,J
-You do not mind being at the center of attention.,EI,-1,E
-Keeping your options open is more important than having a to-do list.,JP,1,P
+- Question,Dimension,Direction,Meaning
+- You find it takes effort to introduce yourself to other people.,EI,1,I
+- You consider yourself more practical than creative.,SN,-1,S
+- Winning a debate matters less to you than making sure no one gets upset.,TF,1,F
+- You get energized going to social events that involve many interactions.,EI,-1,E
+- You often spend time exploring unrealistic and impractical yet intriguing ideas.,SN,1,N
+- Deadlines seem to you to be of relative rather than absolute importance.,JP,1,P
+- Logic is usually more important than heart when it comes to making important decisions.,TF,-1,T
+- Your home and work environments are quite tidy.,JP,-1,J
+- You do not mind being at the center of attention.,EI,-1,E
+- Keeping your options open is more important than having a to-do list.,JP,1,P
 
 # Dev Diary
 
 - Commit #1: Start the Clock!
   - This simply adds the prompt as recieved and begins the dev diary. The next intention is to apply a fullstack boilerplate fo technologies.
+
+- Commit #2: Add MERN Boilerplate
+  - This adds a MERN (Mongo, Express, React, Node) Boilerplate to more quickly spin up a fullstack project. The intention of this stack is as follows:
+    - Mongo: Easy to implement collection based db. For the purposes of this contrived example, this is the simplest implementation to satisfy the reqs. For a production scale app that may require more data introspection in the future, a more traditional relational database may be more desirable. In requirement gathering, this would be something we would want to discuss with product stakeholders as the cost to pivot would become nontrivial.
+    - Express: I know you guys use PHP, but I haven't used Laravel/Cake in about a decade so... going to go with something I can quickly spin up and use Typescript with. Generally, we would want to conform to existing implementation standards here as you want to balance introducing new technologies with your organization's ability to maintain them (i.e. not have a single dev who is the "x lang person"). We just need a basic CRUD experience here and it doesn't even look like Delete will come into play. Update is even a vague notion though we could allow users to retake the test and update their answers and score based on their email key but we'll wait to get to that.
+    - React: I think the seed goes a bit overboard here with implementing things like a redux store so I may rip some things out to simply as we go. I would like to implement a component library like MUI to make development a little easier and consistent and also make room in the future for some sugar like tokenization.
+    - Node: Same as Express comment.
