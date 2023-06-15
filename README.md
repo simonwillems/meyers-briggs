@@ -188,7 +188,7 @@ Create a repository using your personal GitHub account and send us the link that
 # Dev Diary
 
 - Commit #1: Start the Clock!
-  - This simply adds the prompt as recieved and begins the dev diary. The next intention is to apply a fullstack boilerplate fo technologies.
+  - This simply adds the prompt as recieved and begins the dev diary. The next intention is to apply a fullstack boilerplate of technologies.
 
 - Commit #2: Add MERN Boilerplate
   - This adds a MERN (Mongo, Express, React, Node) Boilerplate to more quickly spin up a fullstack project. The intention of this stack is as follows:
@@ -196,3 +196,6 @@ Create a repository using your personal GitHub account and send us the link that
     - Express: I know you guys use PHP, but I haven't used Laravel/Cake in about a decade so... going to go with something I can quickly spin up and use Typescript with. Generally, we would want to conform to existing implementation standards here as you want to balance introducing new technologies with your organization's ability to maintain them (i.e. not have a single dev who is the "x lang person"). We just need a basic CRUD experience here and it doesn't even look like Delete will come into play. Update is even a vague notion though we could allow users to retake the test and update their answers and score based on their email key but we'll wait to get to that.
     - React: I think the seed goes a bit overboard here with implementing things like a redux store so I may rip some things out to simply as we go. I would like to implement a component library like MUI to make development a little easier and consistent and also make room in the future for some sugar like tokenization.
     - Node: Same as Express comment.
+
+- Commit #3: Configuration
+    - Well, this seed seems to be a bit more opinionated than I'd like in a few areas which is always the double edged sword of boilerplates. Since we only want to maintain implemented code, I'm going to have to delete quite a bit as I go which is fine. I also need to completely redo the MongoDB instance since cloud/atlas is wayyyy overkill. I'm also going to not implement the JWT setup which I think is nice to be included but since we don't really need to enforce a logged in state, there's not much point in securing a session for a given authenticated user. We are at least at a Hello World landing page for the seed, so time to start cuttin the fat.
